@@ -1,0 +1,8 @@
+2025-05-27 01:44:37.284 [main] INFO  SOLIDLogger setup:37 - --- Setting up WebDriver for a new test ---
+2025-05-27 01:44:42.404 [main] INFO  SOLIDLogger setup:51 - Chrome browser launched successfully in headless mode.
+2025-05-27 01:44:42.408 [main] INFO  SOLIDLogger testLaunchGoogleAndAssertTitle:18 - Executing test: testLaunchGoogleAndAssertTitle
+2025-05-27 01:44:42.425 [main] INFO  SOLIDLogger testLaunchGoogleAndAssertTitle:22 - Navigating to URL: https://www.google.com
+2025-05-27 01:44:43.934 [main] INFO  SOLIDLogger testLaunchGoogleAndAssertTitle:27 - Actual page title: 'Google'
+2025-05-27 01:44:43.937 [main] INFO  SOLIDLogger testLaunchGoogleAndAssertTitle:31 - Assertion Passed: Page title is 'Google' as expected.
+2025-05-27 01:44:43.941 [main] INFO  SOLIDLogger teardown:66 - --- Tearing down WebDriver after test ---
+2025-05-27 01:44:44.301 [main] INFO  SOLIDLogger teardown:69 - Browser closed successfully.

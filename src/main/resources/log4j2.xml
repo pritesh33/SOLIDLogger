@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+This XML file configures Log4j2, defining log levels, appenders (where logs go, e.g., console, file),
+and log patterns. This adheres to the Open/Closed Principle (OCP) by allowing configuration changes
+without modifying the LoggerUtil.java code.
+-->
+<Configuration status="INFO">
+    <Properties>
+        <Property name="LOG_DIR">logs</Property>
+        <Property name="LOG_FILE_NAME">automation_${LOG_LEVEL}_${date:yyyy-MM-dd_HHmmss}.log</Property>
+        <Property name="CONSOLE_PATTERN">%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} - %msg%n</Property>
+        <Property name="FILE_PATTERN">%d{yyyy-MM-dd HH:mm:ss.SSS} [%t] %-5level %logger{36} %M:%L - %msg%n</Property>
+        <Property name="LOG_LEVEL">INFO</Property>
+    </Properties>
+
+    <Appenders>
+        <Console name="ConsoleAppender" target="SYSTEM_OUT">
+            <PatternLayout pattern="${CONSOLE_PATTERN}"/>
+        </Console>
+
+        <File name="FileAppender" fileName="${LOG_DIR}/${LOG_FILE_NAME}" append="true">
+            <PatternLayout pattern="${FILE_PATTERN}"/>
+        </File>
+    </Appenders>
+
+    <Loggers>
+        <Root level="${LOG_LEVEL}"> <AppenderRef ref="ConsoleAppender" level="${LOG_LEVEL}"/> <AppenderRef ref="FileAppender" level="${LOG_LEVEL}"/>   </Root>
+        <Logger name="com.myframework" level="DEBUG" additivity="false">
+            <AppenderRef ref="ConsoleAppender"/>
+            <AppenderRef ref="FileAppender"/>
+        </Logger>
+    </Loggers>
+</Configuration>
