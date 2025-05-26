@@ -5,7 +5,6 @@ import org.apache.logging.log4j.Logger;
 
 /**
  * A Singleton class for managing logging throughout the Selenium automation framework using Log4j2.
- *
  * Adheres to SOLID principles:
  * - Single Responsibility Principle (SRP): Solely responsible for providing logging capabilities.
  * - Open/Closed Principle (OCP): Configurable via log4j2.xml, allowing extension without modifying this class.
@@ -82,7 +81,8 @@ public class LoggerUtil {
 
     /**
      * Logs an error message with an associated Throwable (exception).
-     * @param message The log message.
+     *
+     * @param message   The log message.
      * @param throwable The Throwable (exception) to log.
      */
     public void error(String message, Throwable throwable) {
@@ -91,7 +91,8 @@ public class LoggerUtil {
 
     /**
      * Logs a fatal message with an associated Throwable (exception).
-     * @param message The log message.
+     *
+     * @param message   The log message.
      * @param throwable The Throwable (exception) to log.
      */
     public void fatal(String message, Throwable throwable) {
